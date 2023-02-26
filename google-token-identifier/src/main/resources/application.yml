@@ -1,22 +1,31 @@
-# Datasource configuration
-spring:
-  datasource:
+spring: 
+  datasource:         # Datasource configuration
     url: jdbc:mysql://localhost:3306/google_token_identifier_db
     username: gti_user
     password: password
-  jpa:
+  jpa:                # JPA configuration
     hibernate.ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect 
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect  
+  security:
+    oauth2:
+      client:
+        registration: 
+          google: 
+            client-id: 1063837208291-rmr8ri8tpjil4nagb0drtdkdjmqoddj3.apps.googleusercontent.com
+            client-secret: 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
 
 
 
 # Server configuration
-server:
+server:   
   port: 8090
+  
+
+
   
   
   
